@@ -27,7 +27,7 @@ T=[[1, 0, x_trans],
 
 R=[0, 0, 0]
 
-            
+        
 for i in range(len(X)):
     B=[X[i],Y[i],1]
     R=np.dot(T,B)

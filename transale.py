@@ -7,6 +7,7 @@ r = int(input("Enter the radius of the circle: "))
 x_quad1 = []
 y_quad1 = []
 decor = []
+
 x_init = 0
 y_init = r
 decision_parameter = 3 - 2*r
@@ -55,11 +56,11 @@ y_quad4 = [(y_cent - y) for y in y_quad1]
 x_quad1 = [(x_cent + x) for x in x_quad1]
 y_quad1 = [(y_cent + y) for y in y_quad1]
 
-# fig = plt.figure()
-
+fig = plt.figure()
+ax = fig.add_subplot(111)
 
 plt.plot(x_quad1, y_quad1, x_quad2, y_quad2, x_quad3, y_quad3, x_quad4, y_quad4)
-
+ax.set_aspect('equal', adjustable='box')
 plt.title("Bresenham Circle Drawing Algorithm")
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")
@@ -97,7 +98,7 @@ while(x < y):
         y -= 1
         p += 10 - 4 * y + 4 * x
     x_quad1_new.append(x)
-    y_quad1_new.append(y)
+    y_quad1_new.appen(y)
     
 
 x_oct2=[]
@@ -126,13 +127,14 @@ y_quad4_new = [(y_cent - y) for y in y_quad1_new]
 x_quad1_new = [(x_cent + x) for x in x_quad1_new]
 y_quad1_new= [(y_cent + y) for y in y_quad1_new]
 
-# fig = plt.figure()
-
+fig = plt.figure()
+ax = fig.add_subplot(111)
 
 plt.plot(
-    x_quad1, y_quad1, x_quad2, y_quad2, x_quad3, y_quad3, x_quad4, y_quad4,
+    # x_quad1, y_quad1, x_quad2, y_quad2, x_quad3, y_quad3, x_quad4, y_quad4,
     x_quad1_new, y_quad1_new, x_quad2_new, y_quad2_new, x_quad3_new, y_quad3_new, x_quad4_new, y_quad4_new
 )
+ax.set_aspect('equal', adjustable='box')
 plt.title("Bresenham Circle Drawing Algorithm")
 plt.xlabel("x-axis")
 plt.ylabel("y-axis")

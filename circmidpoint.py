@@ -18,7 +18,7 @@ while x<y:
         y -= 1
         p= p+2*x-2*y+1
 
-# append the final points        
+      
 x_quad1.append(x)
 y_quad1.append(y)
 for i in range(len(x_quad1)):
